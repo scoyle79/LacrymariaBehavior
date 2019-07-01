@@ -1,0 +1,46 @@
+The data here are stored as Pickles which can be read into python with the import_data.py function. These data are individual tracks that include cell in both dormant and actively hunting states. The data you load is a dictionary in which timepoints are keys and org[t] returns a vector with the following data in each index:
+
+    0: centroid
+    1: full contour
+    2: body contour
+    3: conflict flag (from tracking; says if organisms collided)
+    4: skeleton points
+    5: skeleton head
+    6: skeleton tail
+    7: oriented neck points (from skeleton); goes from base of neck to tip of neck
+    8: oriented body points (from skeleton); goes from tail to start of neck
+    9: contains a 3-uple in which [0] is the centerline, [1] is the x points, and [2] is the y-points
+    10: theta representation of shape
+    11: necklength
+    12: empirical eigenNecks matrix
+    13: covariance explained by eigenshapes
+    14: 5-ev fit of shape
+
+The hunting events we analyzed for the paper correspond to the following tracks and times:
+
+Track		Start		End
+4		47345		56490
+4		135500		138948
+5		20		17500
+7		20		12000
+8		20		6000
+8		72500		89100
+11		20		16000
+12		20		4000
+12		130000		141000
+12		45000		51000
+13		121503		126500 		##NOTE CAPTURES A PREY DURING EVENT
+13		129000		136000		##SMALL AFTERSHOCK EVENTS FOLLOWING A PREY CAPTURE
+14		132500		138900
+16		11455		16999
+42		47500		60000
+56		63500		68600
+64		67560		84308
+146		114051		139300
+151		223465		226455
+197		147000		161850
+241		236750		250660
+325		207103		213103
+351		215127		226925
+544		448180		452721
+
